@@ -6,12 +6,12 @@ import { motion } from 'framer-motion';
 // import transition
 import { transition1 } from '../transitions';
 // import context
-import { CursorContext } from '../context/CursorContext'; 
+// import { CursorContext } from '../context/CursorContext'; 
 // import emailjs
 import emailjs from 'emailjs-com';
 
 const Contact = () => {
-  const { mouseEnterHandler, mouseLeaveHandler } = useContext(CursorContext);
+  // const { mouseEnterHandler, mouseLeaveHandler } = useContext(CursorContext);
   const [form, setForm] = useState({
     name: '',
     email: '',
@@ -65,8 +65,6 @@ const Contact = () => {
     </motion.div>
     {/* text & form */}
     <div 
-      onMouseEnter={mouseEnterHandler}
-      onMouseLeave={mouseLeaveHandler}
       className='lg:flex-1 px-14 flex flex-col justify-center'>
       <h1 className='h1 mb-2'>Contact me</h1>
       <p className='mb-6'>I would love to get suggestions from you.</p>
@@ -106,8 +104,6 @@ const Contact = () => {
     </div>
     {/* image */}
     <motion.div 
-      onMouseEnter={mouseEnterHandler}
-      onMouseLeave={mouseLeaveHandler}
       initial={{ opacity: 0, y: '100%' }} 
       animate={{ opacity: 1, y: 0 }}
       exit={{ opacity: 0, y: '100%' }} 

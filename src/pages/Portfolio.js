@@ -2,11 +2,11 @@ import React, { useContext } from 'react';
 import { Link } from 'react-router-dom';
 import { motion } from 'framer-motion';
 import { transition1 } from '../transitions';
-import { CursorContext } from '../context/CursorContext';
+// import { CursorContext } from '../context/CursorContext';
 import { categories } from '../data/categories';
 
 const Portfolio = () => {
-  const { mouseEnterHandler, mouseLeaveHandler } = useContext(CursorContext);
+  // const { mouseEnterHandler, mouseLeaveHandler } = useContext(CursorContext);
 
   return (
     <motion.section
@@ -17,14 +17,10 @@ const Portfolio = () => {
       className='section pt-[140px] pb-12'
     >
       <div 
-        onMouseEnter={mouseEnterHandler} 
-        onMouseLeave={mouseLeaveHandler}
         className='container mx-auto'
       >
         <h1 className='h1 text-center mb-8'>Portfolio</h1>
         <div 
-          onMouseEnter={mouseEnterHandler} 
-          onMouseLeave={mouseLeaveHandler}
           className='grid grid-cols-1 md:grid-cols-2 gap-8 text-center'
         >
           {categories.map((cat, idx) => (

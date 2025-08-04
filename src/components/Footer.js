@@ -1,15 +1,13 @@
 import React, { useContext } from 'react';
 import { FaTwitter, FaPinterestP, FaInstagram } from 'react-icons/fa';
-import { CursorContext } from '../context/CursorContext';
+// import { CursorContext } from '../context/CursorContext';
 
 const Footer = () => {
-  const { mouseEnterHandler, mouseLeaveHandler } = useContext(CursorContext);
+  // const { mouseEnterHandler, mouseLeaveHandler } = useContext(CursorContext);
 
   return (
     <footer className="bg-gray-900 text-white py-8">
-      <div className="container mx-auto flex flex-col items-center" 
-      onMouseEnter={mouseEnterHandler}
-      onMouseLeave={mouseLeaveHandler}>
+      <div className="container mx-auto flex flex-col items-center">
         <p className="mb-4">© 2025 Mohit Thakur. All rights reserved.</p>
         <div className="flex space-x-6 text-2xl">
           <a
@@ -18,8 +16,6 @@ const Footer = () => {
             rel="noopener noreferrer"
             aria-label="Twitter"
             className="hover:text-blue-400 transition"
-            onMouseEnter={mouseEnterHandler}
-            onMouseLeave={mouseLeaveHandler}
           >
             <FaTwitter />
           </a>
@@ -28,10 +24,7 @@ const Footer = () => {
             target="_blank"
             rel="noopener noreferrer"
             aria-label="Pinterest"
-            className="hover:text-red-400 transition"
-            onMouseEnter={mouseEnterHandler}
-            onMouseLeave={mouseLeaveHandler}
-          >
+            className="hover:text-red-400 transition">
             <FaPinterestP />
           </a>
           <a
@@ -39,10 +32,7 @@ const Footer = () => {
             target="_blank"
             rel="noopener noreferrer"
             aria-label="Instagram"
-            className="hover:text-pink-400 transition"
-            onMouseEnter={mouseEnterHandler}
-            onMouseLeave={mouseLeaveHandler}
-          >
+            className="hover:text-pink-400 transition">
             <FaInstagram />
           </a>
         </div>

@@ -3,10 +3,10 @@ import React, { useContext, useEffect } from 'react';
 import { Link } from 'react-router-dom';
 import { motion } from 'framer-motion';
 import { transition1 } from '../transitions';
-import { CursorContext } from '../context/CursorContext';
+// import { CursorContext } from '../context/CursorContext';
 
 const Home = () => {
-  const { mouseEnterHandler, mouseLeaveHandler } = useContext(CursorContext);
+  // const { mouseEnterHandler, mouseLeaveHandler } = useContext(CursorContext);
 
   // Disable scroll on Home page only
   useEffect(() => {
@@ -31,8 +31,6 @@ const Home = () => {
           animate={{ opacity: 1, y: 0 }}
           exit={{ opacity: 0, y: '-50%' }}
           transition={transition1}
-          onMouseEnter={mouseEnterHandler}
-          onMouseLeave={mouseLeaveHandler}
           className='flex-1 flex flex-col justify-center items-center lg:items-start pt-[120px] px-8 lg:pt-0 lg:px-24'
         >
           <h1 className='h1'>
@@ -60,8 +58,6 @@ const Home = () => {
               transition={transition1}
               src="/images/home/woman.png"
               alt='Photographer'
-              onMouseEnter={mouseEnterHandler}
-              onMouseLeave={mouseLeaveHandler}
               className='object-contain max-h-[700px] w-full lg:max-w-[500px]'
             />
           </motion.div>
